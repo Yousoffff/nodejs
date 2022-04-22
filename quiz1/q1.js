@@ -1,8 +1,9 @@
 const express =require("express");
 const app = express();
 
-app.get("/r/:count", (req, res) => {
-  res.send(`i want kinder ${req.query.count}`);
+app.get("/search", (req, res) => {
+  const{q} = req.query;
+  res.send(`i want ${q} kinder `);
 });
 
-app.listen("4679");
+app.listen(4679);
